@@ -1,0 +1,300 @@
+<!doctype html> <html lang="en"> <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" /> <title>StartupName — Do X without Y</title>
+<meta name="description" content="StartupName helps you do X in minutes.
+Join the waitlist." />
+<meta property="og:title" content="StartupName — Do X without Y" /> <meta property="og:description" content="Do X in minutes. Join the
+waitlist." />
+<meta property="og:type" content="website" /> <style>
+:root{
+--bg:#0b0f17;
+--card:#101827;
+--muted:#94a3b8;
+--text:#e5e7eb;
+--brand:#7c3aed;
+--brand2:#22c55e; --ring:rgba(124,58,237,.35); --border:rgba(148,163,184,.18); --shadow: 0 18px 60px rgba(0,0,0,.35);
+} *{box-sizing:border-box} html,body{height:100%} body{
+margin:0;
+font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+background: radial-gradient(1200px 700px at 15% 10%, rgba(124,58,237,.20), transparent 55%),
+radial-gradient(900px 600px at 90% 20%, rgba(34,197,94,.12), transparent 55%),
+var(--bg); color:var(--text);
+line-height:1.45; }
+a{color:inherit;text-decoration:none} .container{max-width:1100px;margin:0 auto;padding:28px 20px 70px} .nav{
+display:flex;align-items:center;justify-content:space-between; gap:14px; padding:10px 0 20px;
+position:sticky; top:0; backdrop-filter: blur(10px);
+background: linear-gradient(to bottom, rgba(11,15,23,.92),
+rgba(11,15,23,.55));
+ z-index:10; }
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter- spacing:.2px}
+.dot{width:12px;height:12px;border-radius:999px;background:linear- gradient(135deg,var(--brand),var(--brand2)); box-shadow:0 0 0 6px rgba(124,58,237,.08)}
+.navlinks{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end} .navlinks a{color:var(--muted);font-weight:600}
+.navlinks a:hover{color:var(--text)}
+.btn{
+display:inline-flex;align-items:center;justify-content:center;gap:8px; padding:10px 14px;border-radius:12px;
+border:1px solid var(--border);
+background: rgba(16,24,39,.6);
+box-shadow: 0 8px 28px rgba(0,0,0,.25);
+font-weight:700; }
+.btn.primary{
+background: linear-gradient(135deg, rgba(124,58,237,.95),
+rgba(124,58,237,.65));
+border-color: rgba(124,58,237,.5);
+}
+.btn:hover{transform: translateY(-1px)} .btn:active{transform: translateY(0)} .hero{
+display:grid; grid-template-columns: 1.2fr .8fr; gap:22px;
+padding:34px 0 10px; }
+@media (max-width: 900px){ .hero{grid-template-columns: 1fr} } h1{font-size:54px;line-height:1.02;margin:8px 0 12px}
+@media (max-width: 520px){ h1{font-size:40px} } .sub{font-size:18px;color:var(--muted);max-width:55ch} .heroCard{
+background: rgba(16,24,39,.62); border:1px solid var(--border); border-radius:18px; padding:18px;
+box-shadow: var(--shadow); }
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 18px} .badge{
+padding:6px 10px;border-radius:999px;font-weight:700; color:rgba(229,231,235,.9);
+border:1px solid var(--border);
+background: rgba(2,6,23,.32);
+}
+
+ .ctaRow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin- top:18px}
+.mini{color:var(--muted);font-size:13px} .stats{
+display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px }
+.stat{
+padding:12px;border-radius:14px;background: rgba(2,6,23,.35);border:1px
+solid var(--border) }
+.stat b{font-size:18px}
+.section{padding:34px 0 0}
+.section h2{font-size:28px;margin:0 0 10px} .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px} @media (max-width: 900px){ .grid3{grid-template-columns:1fr} } .card{
+background: rgba(16,24,39,.55); border:1px solid var(--border); border-radius:18px;padding:16px; box-shadow: 0 14px 40px rgba(0,0,0,.25);
+} .icon{
+width:38px;height:38px;border-radius:12px; display:flex;align-items:center;justify-content:center; background: rgba(124,58,237,.16);
+border:1px solid rgba(124,58,237,.35); margin-bottom:10px;
+box-shadow: 0 0 0 6px rgba(124,58,237,.06); }
+.muted{color:var(--muted)} .divider{height:1px;background:var(--border);margin:22px 0} .pricing{
+display:grid;grid-template-columns:repeat(3,1fr);gap:12px }
+@media (max-width: 900px){ .pricing{grid-template-columns:1fr} } .price{font-size:34px;margin:6px 0 0}
+.pill{
+display:inline-block;
+padding:5px 10px;border-radius:999px; background: rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.35); color: rgba(229,231,235,.92); font-weight:800;
+font-size:12px;
+}
+ul{margin:10px 0 0; padding-left:18px} li{margin:6px 0; color: var(--muted)}
+
+ .faq details{
+background: rgba(16,24,39,.45); border:1px solid var(--border); border-radius:14px; padding:12px 14px;
+margin:10px 0;
+}
+details summary{cursor:pointer;font-weight:800} .formRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px} input, textarea{
+width:100%;
+padding:12px 12px;border-radius:12px; border:1px solid var(--border); background: rgba(2,6,23,.45);
+color: var(--text);
+outline:none;
+}
+input:focus, textarea:focus{box-shadow:0 0 0 6px var(--ring); border-color: rgba(124,58,237,.55)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px} @media (max-width: 700px){ .two{grid-template-columns:1fr} } footer{margin-top:34px;color:var(--muted);font-size:13px} .toast{
+position: fixed; right:18px; bottom:18px; max-width: 360px;
+background: rgba(16,24,39,.92); border:1px solid var(--border); border-radius:14px;
+padding:12px 12px; box-shadow: var(--shadow); display:none;
+}
+.toast.show{display:block}
+.kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+"Liberation Mono", "Courier New", monospace;
+font-size:12px; color:rgba(229,231,235,.85); background:rgba(2,6,23,.45); border:1px solid var(--border); padding:2px 6px; border-radius:7px;
+} </style>
+</head>
+<body>
+<div class="container">
+<div class="nav">
+<div class="logo"><span class="dot"></span> <span>StartupName</
+span></div>
+<div class="navlinks">
+
+ <a href="#features">Features</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact" class="btn">Join Waitlist</a>
+</div> </div>
+<section class="hero" id="top"> <div>
+<div class="badges">
+<span class="badge">   Ship faster</span> <span class="badge">   Privacy-first</span> <span class="badge">   Built for growth</span>
+</div>
+<h1>Do <u>X</u> without <u>Y</u>.</h1> <p class="sub">
+StartupName helps <b>your target customer</b> achieve <b>one clear outcome</b> in minutes,
+without the usual hassle. Replace this copy with your real value prop. </p>
+<div class="ctaRow">
+<a class="btn primary" href="#contact">Get early access →</a>
+<a class="btn" href="#pricing">See pricing</a>
+<span class="mini">No spam. Cancel anytime. <span class="kbd">⌘</
+span> <span class="kbd">K</span> quick nav</span> </div>
+<div class="stats">
+<div class="stat"><b>10×</b><div class="muted">faster setup</div></
+div>
+<div class="stat"><b>2 min</b><div class="muted">to first result</
+div></div>
+<div class="stat"><b>99.9%</b><div class="muted">uptime*</div></
+div> </div>
+<p class="mini muted" style="margin-top:10px">*Replace with real metrics when you have them.</p>
+</div>
+<div class="heroCard">
+<div class="muted" style="font-weight:800;margin-bottom:8px">Live
+preview</div>
+<div class="card" style="margin-bottom:12px">
+<div class="muted" style="font-weight:800">What you get</div> <div class="divider"></div>
+<div style="display:grid;gap:10px">
+
+ <div><b>1.</b> A single clear outcome</div> <div><b>2.</b> Easy onboarding</div> <div><b>3.</b> Shareable results</div>
+</div> </div>
+<div class="card">
+<div class="muted" style="font-weight:800;margin-bottom:8px">Early
+access list</div>
+<form id="waitlistForm">
+<div class="two"> <div>
+<label class="mini muted">Name</label>
+<input name="name" placeholder="Hugo" autocomplete="name" /> </div>
+<div>
+<label class="mini muted">Email</label>
+<input name="email" placeholder="you@email.com" autocomplete="email" required />
+</div>
+</div>
+<div style="margin-top:10px">
+<label class="mini muted">What are you trying to solve?</label>
+<textarea name="note" rows="3" placeholder="A sentence is enough (optional)"></textarea>
+</div>
+<div class="formRow">
+<button class="btn primary" type="submit">Join waitlist</button>
+<span class="mini muted">We’ll email you when we launch.</span> </div>
+</form> </div>
+</div> </section>
+<section class="section" id="features">
+<h2>Features</h2>
+<p class="muted">Swap these for what your product actually does. Keep it
+outcome-focused.</p> <div class="grid3">
+<div class="card">
+<div class="icon"> </div>
+<b>Instant setup</b>
+<p class="muted">Get to your first result in minutes, not days.</p>
+</div>
+<div class="card">
+ <div class="icon">   </div>
+
+ <b>Smart defaults</b>
+<p class="muted">Opinionated UX so users don’t get stuck.</p> </div>
+<div class="card">
+<div class="icon">   </div>
+<b>Measurable impact</b>
+<p class="muted">Track what matters and share progress easily.</p>
+</div> </div>
+</section>
+<section class="section" id="pricing">
+<h2>Pricing</h2>
+<p class="muted">Start simple. You can refine pricing after talking to
+users.</p>
+<div class="pricing"> <div class="card">
+<b>Starter</b>
+<div class="price">£0</div>
+<div class="muted">For trying it out</div> <ul>
+<li>Core feature access</li> <li>Basic support</li> <li>Limited usage</li>
+</ul>
+<div class="divider"></div>
+<a class="btn" href="#contact">Join waitlist</a>
+</div>
+<div class="card" style="border-color: rgba(124,58,237,.55)"> <div style="display:flex;align-items:center;justify-content:space-
+between;gap:10px"> <b>Pro</b>
+<span class="pill">Most popular</span>
+</div>
+<div class="price">£19<span class="muted" style="font-size:14px">/
+mo</span></div>
+<div class="muted">For serious users</div> <ul>
+<li>Everything in Starter</li> <li>Higher limits</li> <li>Priority support</li>
+</ul>
+<div class="divider"></div>
+<a class="btn primary" href="#contact">Get early access</a>
+</div>
+
+ <div class="card">
+<b>Business</b>
+<div class="price">Let’s talk</div> <div class="muted">For teams</div> <ul>
+<li>Team features</li> <li>Custom onboarding</li> <li>SLA + security</li>
+</ul>
+<div class="divider"></div>
+<a class="btn" href="#contact">Contact</a>
+</div> </div>
+</section>
+<section class="section faq" id="faq"> <h2>FAQ</h2>
+<details>
+<summary>When are you launching?</summary>
+<p class="muted">Put your target date here (or say “rolling invites”).</p> </details>
+<details>
+<summary>Who is this for?</summary>
+<p class="muted">Your ideal customer in one sentence.</p> </details>
+<details>
+<summary>What do I get with early access?</summary>
+<p class="muted">Discounts, feature input, concierge onboarding, etc.</ p>
+</details> </section>
+<section class="section" id="contact">
+<h2>Join the waitlist</h2>
+<p class="muted">This demo stores submissions locally in your browser.
+Hook it to a backend when ready.</p>
+<div class="card">
+<form id="contactForm">
+<div class="two"> <div>
+<label class="mini muted">Email</label>
+<input name="email" type="email" placeholder="you@email.com" required />
+</div> <div>
+
+ <label class="mini muted">Company (optional)</label>
+<input name="company" placeholder="Acme Ltd" /> </div>
+</div>
+<div style="margin-top:10px">
+<label class="mini muted">Message</label>
+<textarea name="message" rows="4" placeholder="Tell us what you need"></textarea>
+</div>
+<div class="formRow">
+<button class="btn primary" type="submit">Send</button>
+<span class="mini muted">Or email: hello@startupname.com</span> </div>
+</form> </div>
+<footer>
+<div class="divider"></div>
+© <span id="year"></span> StartupName. Built with simple HTML/CSS.
+</footer> </section>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+const toast = (msg) => {
+const el = document.getElementById("toast");
+el.textContent = msg;
+el.classList.add("show");
+clearTimeout(window.__toastTimer);
+window.__toastTimer = setTimeout(() => el.classList.remove("show"),
+2600); };
+const saveLead = (data) => {
+const key = "startup_leads_v1";
+const prev = JSON.parse(localStorage.getItem(key) || "[]"); prev.push({ ...data, ts: new Date().toISOString() }); localStorage.setItem(key, JSON.stringify(prev));
+};
+document.getElementById("waitlistForm").addEventListener("submit", (e) => {
+e.preventDefault();
+const fd = new FormData(e.target);
+const data = Object.fromEntries(fd.entries());
+
+if (!data.email) return;
+saveLead({ source: "hero", ...data }); e.target.reset();
+toast("You're on the list   ");
+});
+document.getElementById("contactForm").addEventListener("submit", (e) => {
+e.preventDefault();
+const fd = new FormData(e.target);
+const data = Object.fromEntries(fd.entries());
+saveLead({ source: "contact", ...data });
+e.target.reset();
+toast("Message saved   (connect backend to email it)");
+});
+document.getElementById("year").textContent = new Date().getFullYear();
+// Quick nav: Cmd/Ctrl + K document.addEventListener("keydown", (e) => {
+const isK = e.key.toLowerCase() === "k"; const mod = e.metaKey || e.ctrlKey;
+if (mod && isK) {
+e.preventDefault();
+const choice = prompt("Go to: features, pricing, faq, contact"); if (!choice) return;
+const id = choice.trim().toLowerCase();
+const el = document.getElementById(id);
+if (el) el.scrollIntoView({ behavior: "smooth" });
+else toast("Try: features / pricing / faq / contact");
+} });
+</script> </body> </html>
